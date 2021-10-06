@@ -20,9 +20,9 @@ function Header() {
 
             <div className='header__right'>  
                 {/*<Avatar />*/}   
-                <a href='http://'>Quartos</a>
-                <a href='http://'>Contatos</a> 
-                <a href='http://'>Login</a> 
+                <a href='./search'>Quartos</a>
+                <a href='./'>Contatos</a> 
+                <a href='./loginpage'>Login</a> 
                {/*<LanguageIcon />*/}
                 
             </div>
