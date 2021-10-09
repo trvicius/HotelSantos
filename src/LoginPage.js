@@ -18,14 +18,12 @@ function LoginPage() {
     return (
         <div className="login">
          <div className="login-logo">
-            <img
-               src="https://anzuns.org/wp-content/uploads/2018/02/admin_login.png"
-               alt="MdLockLogin App"
-            />
+
          </div>
 
          <div className="login-right">
-            <h1>Acessar App</h1>
+            <h1>Sign in</h1>
+            <p> Use sua conta para logar </p>
 
             <div className="login-loginInputEmail">
                <MdEmail />
