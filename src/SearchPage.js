@@ -1,22 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react'
 import './SearchPage.css';
 import { Button } from "@material-ui/core";
 import SearchResult from "./SearchResult";
+import { useHistory } from "react-router-dom";
+import Search from './Search';
 
 function SearchPage() {
+    const history = useHistory();
+    const [showSearch, setShowSearch] = useState(false);
+
+
     return (
-        <div className='searchPage'>
-            {/*
-            <div className='searchPage__info'>
-                <p>62 stays · 26 august to 30 august · 2 guest</p>
-                <h1>Stays nearby</h1>
-                <Button variant="outlined">Cancellation Flexibility</Button>
-                <Button variant="outlined">Type of place</Button>
-                <Button variant="outlined">Price</Button>
-                <Button variant="outlined">Rooms and beds</Button>
-                <Button variant="outlined">More filters</Button>
+<div>
+<div className='banner' >
+            <div className='bannersearch'>
+                {showSearch && <Search />}
+
+                <Button onClick={() => setShowSearch(!showSearch)} className='bannersearchButton' variant='outlined'>
+                    {showSearch ? "Hide" : "Search Dates"}
+                </Button>
             </div>
-            */}
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+        <div className='searchPage'>
             <SearchResult
                 img="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ_wbPYTxQPMcBh7SPzLFActXnP3uhifeVT_g&usqp=CAU"
                 location="Private room in center of London"
@@ -82,6 +98,7 @@ function SearchPage() {
                 price="R$90 / night"
                 total="R$650 total"
             />
+        </div>
         </div>
     )
 }
