@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.css';
-import Banner from './Banner'
+import Carousel from './Carousel'
 import Card from './Card'
 
 // ES7 snippets to do 'rfce'
@@ -8,7 +8,7 @@ import Card from './Card'
 function Home() {
     return (
         <div className='home'>
-            <Banner />
+            <Carousel />
 
             <div className='home__section'>
             <Card
