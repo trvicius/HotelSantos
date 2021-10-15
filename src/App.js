@@ -5,7 +5,7 @@ import Header from './Header';
 import Footer from './Footer';
 import SearchPage from './SearchPage';
 import LoginPage from './LoginPage';
-
+import Signup from './signup';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
@@ -18,6 +18,10 @@ function App() {
         <Header />
 
         <Switch>
+
+        <Route exact path="/signup">
+              <Signup />
+          </Route> 
 
           <Route exact path="/loginpage">
               <LoginPage />

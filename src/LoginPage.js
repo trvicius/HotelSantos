@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import { useHistory } from "react-router-dom";
 import { Button } from "@material-ui/core";
 import './LoginPage.css'
+import './signup.js'
 import { MdEmail, MdLock } from "react-icons/md"
 import { HiEye, HiEyeOff } from "react-icons/hi"
 
@@ -62,10 +63,9 @@ function LoginPage() {
                Entrar
             </button>
 
-            <h4>Não tenho conta!</h4>
 
             <button type="submit">
-               Cadastrar
+                     <a href="/signup">Cadastrar</a>
             </button>
          </div>
       </div>
