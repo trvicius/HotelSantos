@@ -1,3 +1,4 @@
+
 .login {
     display: flex;
     align-items: center;
@@ -19,7 +20,7 @@
 .login-right { 
     border-width: 1px;
     border-style: solid;
-    border-color: rgb(161, 151, 151);
+    border-color: hsl(9, 15%, 72%);
     background-color: white;
     border-radius: 5px;
     display: flex;
@@ -34,14 +35,16 @@
 
 .login-right h1 {
     font-family: 'Open Sans';
-    font-size: 25px;
-    margin-bottom: 20px;
+    font-size: 30px;
+    color: hsl(16, 4%, 49%);
+    padding-top: 2rem;
 }
 
 .login-right p {
     font-family: 'Open Sans';
-    font-size: 20px;
-    margin-bottom: 20px;
+    font-size: 18px;
+    margin-top: -15px;
+    color: hsl(11, 5%, 57%);
 }
 
 .login-right h4 {
@@ -73,7 +76,7 @@
     background: transparent;
     width: 100%;
     outline-width: 0;
-    color: #E1E1E6;
+    color: #474646;
     border: none;
     font-size: 17px;
     margin-left: 10px;
@@ -102,7 +105,7 @@
     background: transparent;
     width: 100%;
     outline-width: 0;
-    color:  #E1E1E6;
+    color:  #474646;
     border: none;
     font-size: 17px;
     margin-left: 12px;
@@ -111,15 +114,15 @@
 
 .login-right button {
     width: 98%;
-    background-color: #202024;
+    background-color: hsl(14, 97%, 57%);
     color: #EFF2F5;
     font-weight: 800;
     height: 50px;
     border-radius: 5px;
     font-size: 18px;
-    margin-top: 5px;
+    margin-top: 1rem;
     border: none;
-
+    margin-bottom: 0.05rem;
     outline-width: 0;
 }
 
