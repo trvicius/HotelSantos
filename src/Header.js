@@ -25,7 +25,7 @@ function Header() {
             <div className='header__right'>  
                 {/*<Avatar />*/}   
                 <a href='./search'>Quartos</a>
-                <a href='./'>Contatos</a> 
+                <a href='./Contato'>Contatos</a> 
                 <a href='./loginpage'>Login</a> 
                {/*<LanguageIcon />*/}
                 

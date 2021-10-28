@@ -65,7 +65,7 @@ function LoginPage() {
 
 
             <button type="submit">
-                     <a href="/signup">Cadastrar</a>
+                     <a href="/signup" id="cadastrar">Cadastrar</a>
             </button>
          </div>
       </div>
