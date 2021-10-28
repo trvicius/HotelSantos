@@ -6,6 +6,7 @@ import Footer from './Footer';
 import SearchPage from './SearchPage';
 import LoginPage from './LoginPage';
 import Signup from './signup';
+import Contato from './Contato';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
@@ -29,6 +30,10 @@ function App() {
 
           <Route path="/search">
             <SearchPage />
+          </Route>
+
+          <Route path="/Contato">
+            <Contato />
           </Route>
 
           <Route path="/">

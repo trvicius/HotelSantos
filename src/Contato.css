@@ -1,0 +1,14 @@
+.global {
+    padding: 0px;
+    margin: 0px;
+}
+
+p {
+    font-size: 20px;
+    padding: 8px;
+}
+
+h2 {
+    padding: 12px;
+}
+
