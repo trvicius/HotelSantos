@@ -1,51 +1,55 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react'
 import './Home.css';
 import Carousel from './Carousel'
 import Card from './Card'
+import api from './services/api'
 
 // ES7 snippets to do 'rfce'
 
 function Home() {
+    const [rooms, setRooms] = useState([]);
+    async function getRooms() {
+        var response = await api.get("/rooms?reservado=true");
+
+        //console.log(response);
+
+        setRooms(response.data)
+    }
+
+    useEffect(getRooms, [])
+
+    console.log(rooms)
     return (
         <div className='home'>
             <Carousel />
 
             <div className='home__section'>
             <Card
-                src="https://dicasbarcelona.com.br/wp-content/uploads/2020/06/HOSTEL-NUT-Granada-.jpg"
-                title="Conforto"
-                description="Acomodações para toda familia."
+                src="https://s2.glbimg.com/owGGkt7NP8YnUUmVQ2luKHMAMV4=/0x0:639x423/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2020/g/l/VbPsVeSjiBvjbow4hAEA/piscina-hotel.jpg"
+                title="Piscina ao ar livre"
+                description="Diversão para toda familia."
             />
             <Card
-                src="https://a0.muscache.com/im/pictures/15159c9c-9cf1-400e-b809-4e13f286fa38.jpg?im_w=720"
-                title="Sonhe"
-                description="Espaços ao ar livre."
+                src="https://exp.cdn-hotels.com/hotels/1000000/700000/692500/692420/bd263dfe_z.jpg?impolicy=fcrop&w=500&h=333&q=medium"
+                title="Jacuzzi"
+                description="Aproveite nossa jacuzzi para relaxar e esquecer todos os seus problemas."
             />
             <Card
-                src="https://jupor.ai/wp-content/uploads/2019/08/Hostel-no-Rio-de-Janeiro.jpg"
-                title="Lazer"
-                description="Sala de jogos e piscinas para a diversão dentro e fora do Hotel."
+                src="http://www.falandodeviagem.com.br/imagens2/Old_Harbour_01.jpg"
+                title="Restaurante"
+                description="Restaurante tradicional da cidadade de Santos, com grande varieade de pratos."
             />
             </div>
             <div className='home__section'>
-            <Card
-                src="https://media.nomadicmatt.com/2019/airbnb_breakup3.jpg"
-                title="3 Camas, ideal para quem ta de passagem"
-                description="Interior moderno e acochegante"
-                price="R$130/Noite"
-            />
-            <Card
-                src="https://thespaces.com/wp-content/uploads/2017/08/Courtesy-of-Airbnb.jpg"
-                title="Quarto tematizado LONDON"
-                description="Interior inspirado em Londres"
-                price="R$350/Noite"
-            />
-            <Card
-                src="https://media.nomadicmatt.com/2018/apartment.jpg"
-                title="Casal"
-                description="Quarto ideal para o casal, com vista direta para o mar."
-                price="R$70/Noite"
-            />
+                {
+                    rooms.map(room => <Card
+                        src={room.img}
+                        title={room.title}
+                        description={room.description}
+                        price={`R$ ${room.price} por noite`}
+                        key={room.id}
+                    />)
+                }
             </div>
         </div>
     )

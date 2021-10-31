@@ -19,7 +19,7 @@ function Carousel() {
           <ArrowBackIosIcon style={{ fontSize: 30 }} />
         </div>
         <div className="center">
-          <p>Temas de quartos ao redor de todo o globo</p>
+          <p>Hotel Santos</p>
         </div>
         <div className="right" onClick={() => {currImg < images.length - 1 && setCurrImg(currImg + 1);}}>
           <ArrowForwardIosIcon style={{ fontSize: 30 }} />

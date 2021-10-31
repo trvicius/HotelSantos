@@ -1,17 +1,17 @@
 import City from "./city.jpg";
-import Salvador from "./salvador.jpg";
-import Ubc from "./ubc.jpg";
+import santos from "./santos.jpg";
+import santosEmissario from "./santosEmissario.jpg";
 
 export const images = [
-  { title: "San Diego", subtitle: "This is San Diego", img: City },
+  { title: "Santos", subtitle: "Isso é Santos", img: City },
   {
-    title: "Salvador, Brazil",
-    subtitle: "The Best City in the World",
-    img: Salvador,
+    title: "Santos, Brasil",
+    subtitle: "A melhor cidade do mundo",
+    img: santos,
   },
   {
-    title: "UBC (Vancouver)",
-    subtitle: "The University of British Columbia",
-    img: Ubc,
+    title: "Santos, São Paulo",
+    subtitle: "Santos, São Paulo",
+    img: santosEmissario,
   },
 ];
