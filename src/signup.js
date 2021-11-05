@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import { useHistory } from "react-router-dom";
 import './signup.css';
 import api from './services/api'
 
@@ -25,22 +26,29 @@ const useStyles = makeStyles(theme => ({
 
 const Form = ({ handleClose }) => {
   const classes = useStyles();
-  // create state variables for each input
-  // const [firstName, setFirstName] = useState('');
-  // const [lastName, setLastName] = useState('');
+  const history = useHistory();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [users, setUsers] = useState([]);
 
-  async function handleSubmit() {
+  async function handleSubmit(e) {
+    e.preventDefault();
     let payload = {email, password}
 
-    var response = await api.post("/users", payload);
+    var response = await api.post("users", payload);
 
     console.log(response);
 
     setUsers(response.data)
     
+    try {
+      var response = await api.post("/auth", payload);
+      localStorage.setItem("hs:token", response.data.token)
+      history.push("/home")
+   } catch (err) {
+      alert("Usuário ou senha inválidos")
+      localStorage.removeItem("hs:token")
+   }
 }
 
   /*const handleSubmit = e => {
@@ -54,7 +62,7 @@ const Form = ({ handleClose }) => {
       <div>
           <h1> Sign up</h1>
       </div>
-    <form className={classes.root} onSubmit={handleSubmit}>
+    <form className={classes.root} method='post' onSubmit={handleSubmit}>
         <TextField
         label="Email"
         variant="filled"
@@ -76,7 +84,7 @@ const Form = ({ handleClose }) => {
           <a href="./LoginPage"> Cancel </a>
         </Button>
         <Button type="submit" variant="contained" color="primary">
-        <a href="./Home"> Signup </a>
+        Signup 
         </Button>
       </div>
     </form>
