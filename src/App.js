@@ -7,6 +7,7 @@ import SearchPage from './SearchPage';
 import LoginPage from './LoginPage';
 import Signup from './signup';
 import Contato from './Contato';
+import Booked from './Booked';
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import ProtectedRoute from "./ProtectedRoute"
 
@@ -30,6 +31,8 @@ function App() {
 
           {/* <Route path="/search" component={SearchPage} /> */}
           <ProtectedRoute path="/search" component={SearchPage} />
+
+          <ProtectedRoute path="/Booked" component={Booked} />
 
           <Route path="/Contato">
             <Contato />

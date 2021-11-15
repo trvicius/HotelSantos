@@ -1,0 +1,87 @@
+.BookedResult {
+    display: flex;
+    position: relative;
+    margin: 20px;
+    padding: 20px;
+    border-bottom: 1px solid lightgray;
+    cursor: pointer;
+  }
+
+.BookedResult:hover {
+    opacity: 0.8;
+}
+
+.BookedResult > img {
+    height: 200px;
+    width: 350px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.BookedResult__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 20px;
+}
+
+.BookedResult__heart {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+}
+
+.BookedResult__infoTop {
+    width: 40vw;
+}
+
+.BookedResult__infoTop > h3 {
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+.BookedResult__infoTop > p {
+    margin-top: 10px;
+    font-size: 13px;
+    color: gray;
+  }
+  
+.BookedResult__infoBottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.BookedResult__star {
+    color: red;
+}
+
+
+.BookedResult__stars {
+    display: flex;
+    align-items: center;
+}
+
+.BookedResults__price > p {
+    text-align: right;
+  }
+
+.BookedResults__price {
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+}
+
+.reserva{
+    width: 98%;
+    background-color: hsl(14, 97%, 57%);
+    color: #EFF2F5;
+    font-weight: 800;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 1rem;
+    border: none;
+    margin-bottom: 0.05rem;
+    outline-width: 0;
+}
