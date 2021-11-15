@@ -1,10 +1,5 @@
 import React, {useEffect, useState} from 'react'
 import './Header.css'
-//import SearchIcon from "@material-ui/icons/Search";
-import LanguageIcon from "@material-ui/icons/Language";
-//import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import { Avatar } from "@material-ui/core";
-import { Link } from "react-router-dom";
 import api from "./services/api"
 
 
@@ -43,11 +38,12 @@ const [authorized, setAuthorized] = useState(false)
             </div>
 
             <div className='header__right'>  
-                {/*<Avatar />*/}   
+                  
                 <a href='./search'>Quartos</a>
-                <a href='./Contato'>Contatos</a> 
+                <a href='./Contato'>Contatos</a>
+                <a href='./Booked'>Reservas</a>  
                 {authorized ? <a href="./" onClick={() => localStorage.removeItem("hs:token")}>Logout</a> : <a href='./'>Login</a>} 
-               {/*<LanguageIcon />*/}
+               
                 
             </div>
         </div>
