@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import './Home.css';
-import Carousel from './Carousel'
+import CarouselHome from './Carousel'
 import Card from './Card'
 import api from './services/api'
+import Carousel from "react-elastic-carousel";
 
 // ES7 snippets to do 'rfce'
 
@@ -21,7 +22,7 @@ function Home() {
     console.log(rooms)
     return (
         <div className='home'>
-            <Carousel />
+            <CarouselHome />
 
             <div className='home__section'>
             <Card
@@ -41,6 +42,7 @@ function Home() {
             />
             </div>
             <div className='home__section'>
+            <Carousel breakPoints={breakPoints}>
                 {
                     rooms.map(room => <Card
                         src={room.img}
@@ -50,6 +52,7 @@ function Home() {
                         key={room.id}
                     />)
                 }
+            </Carousel>
             </div>
         </div>
     )

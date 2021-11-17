@@ -7,7 +7,7 @@ import { images } from "./CarouselData";
 import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 
-function Carousel() {
+function CarouselHome() {
   const [currImg, setCurrImg] = useState(0);
   const history = useHistory();
   const [showSearch, setShowSearch] = useState(false);
@@ -29,4 +29,4 @@ function Carousel() {
   )
 }
 
-export default Carousel;
+export default CarouselHome;
