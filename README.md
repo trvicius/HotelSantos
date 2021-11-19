@@ -19,8 +19,10 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 - [x] Cadastro
 - [x] Login
 - [x] Alugar um quarto
-- [ ] Servidor na nuvem
-- [ ] Upar o sistema na Heroku
+- [x] Fazer Check out
+- [x] Pagina de Contatos
+- [x] Servidor na nuvem
+- [x] Upar o sistema na Heroku
 
 
 ## 💻 Pré-requisitos
@@ -53,9 +55,9 @@ Para startar o sistema HotelSantos, siga estas etapas:
 npm start
 ```
 
-Lembrando que ao dar npm start rodara apontado ao servidor, para visualizar você deve ligar o servidor backend que esta em outro repositorio -> https://github.com/trvicius/BackEnd
+Lembrando que ao dar npm start rodara apontado ao servidor, para visualizar você deve ligar o servidor backend que esta em outro repositorio -> https://github.com/trvicius/BackEnd ou conete-se no nosso servidor heroku https://hotelsantos.herokuapp.com/
 
-Porem o site se encontra no ar, clique aqui -> https://hotelsatosweb.herokuapp.com/
+Porem o site se encontra no ar, clique aqui -> https://hotelsantosweb.herokuapp.com/
 
 ## 📫 Contribuindo para o projeto
 <!---Se o seu README for longo ou se você tiver algum processo ou etapas específicas que deseja que os contribuidores sigam, considere a criação de um arquivo CONTRIBUTING.md separado--->
