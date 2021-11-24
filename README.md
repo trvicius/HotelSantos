@@ -71,6 +71,16 @@ Para contribuir com o projeto, siga estas etapas:
 
 Como alternativa, consulte a documentação do GitHub em [como criar uma solicitação pull](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
+## 💻 Versão em Electron
+
+Temos tambem uma versão feita com para desktop em Electron:
+Codigo: https://github.com/trvicius/Hotel-Santos-Electron-Codigo
+Executavel: https://github.com/trvicius/Hotel-Santos-Electron
+
+## 💻 Versão Mobile
+Temos uma versão feita com para mobile com React-Native:
+Repositorio: https://github.com/trvicius/HotelSantosApp
+
 ## 🤝 Colaboradores
 
 Agradecemos às seguintes pessoas que contribuíram para este projeto:
